@@ -42,11 +42,8 @@
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]} 
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}[label=\textbullet, itemsep=0.1em, topsep=0.5em, parsep=0.6pt]}
+\newcommand{\resumeItemListStart}{\begin{itemize}[label=\textbullet, itemsep=0.1em, topsep=0.3em, parsep=0.6pt]}% itemsep is the space between items % topsep is the space between title and first item % parsep is the space between items (all points)
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{0pt}}
-% itemsep is the space between items
-% topsep is the space between title and first item
-% parsep is the space between items (all points)
 
 \begin{document}
 
@@ -60,7 +57,7 @@
 \resumeSubHeadingListStart
 \resumeSubheading
 {University of Moncton, Faculty of Engineering}
-{Expected Dec 2025}
+{Expected Feb 2026}
 {Master of Applied Science (MASc) \textbar\ CGPA: 4.15/4.3}
 {New Brunswick, Canada}
 \vspace{-1pt}
@@ -77,15 +74,26 @@
 \resumeSubHeadingListStart
 \resumeExperienceSubheading
 {Master's Thesis}{}
-{Vision Language Action Models for Industrial Robotic Manipulation}{}
+{End-to-End Multimodal AI Agent for Autonomous Robotic Control}{}
 \resumeItemListStart
-\resumeItem{Employed parameter-efficient fine-tuning to adapt vision–language models for generating discrete robotic action tokens}
-\resumeItem{Benchmarked the tokenization method against continuous action generation via diffusion decoders to analyze accuracy and latency trade-offs}
-\resumeItem{Collected task demonstrations and fine-tuned vision–language–action (VLA) policies with imitation learning}
-\resumeItem{Evaluated trained models' success rates on real-world tasks using a SO-101 robotic arm}
-\resumeItem{Explored Reinforcement Learning (RL) methods in simulation environments to improve policy generalization}\resumeItem{Orchestrated multi-GPU training jobs through the CCDB Canada Compute platform}
+\resumeItem{Designed an LLM-based agent integrated with a Vision-Language-Action policy for end-to-end control of a SO-101 robotic arm, enabling auto-planning, recovery, and real-time error handling from visual observations to physical action execution} 
+\resumeItem{Developed a multimodal voice interface for natural human-robot interaction and hands-free task execution}
+\resumeItem{Applied parameter-efficient fine-tuning and imitation learning to adapt vision-language models for robotic action generation}
+\resumeItem{Quantified system performance on real-world tasks, analyzing success rates and latency across VLA architectures}
+\resumeItem{Orchestrated multi‑GPU training workflows on Compute Canada’s CCDB cluster via Slurm}
+
 \resumeItemListEnd
+
+
+\textbf{CrowdKPI}
+\vspace{-8pt}
+\resumeItemListStart
+\resumeItem{Developed a cross-platform audience analytics app using React Native and FastAPI, enabling users to measure crowd engagement and emotional response through YOLOv11 face detection and ViT-based emotion and engagement classification}
+\resumeItem{Built end-to-end CI/CD workflows using GitHub Actions with automated testing and containerized deployment}
+\resumeItemListEnd
+
 \resumeSubHeadingListEnd
+
 
 \section{Experience}
 \vspace{5pt}
@@ -101,27 +109,27 @@
 \resumeItemListEnd
 
 \resumeExperienceSubheading
-{CFRIA, University of Moncton}{Jan 2025 – Apr 2025}
+{LARIHS, University of Moncton}{Jan 2025 – Apr 2025}
 {Research Assistant}{New Brunswick, Canada}
 \resumeItemListStart
 \resumeItem{Migrated 15 years of Acadian student survey data from 7 schools, converting Excel files to a centralized PostgreSQL database}
 \resumeItem{Built a multi-agent workflow using LangGraph with human-in-the-loop validation for natural language queries}
-\resumeItem{Developed a Streamlit web application with automated plotting for query results (\href{https://chatcapitalhumain.ca}{chatcapitalhumain.ca}); validated with research personnel and adopted to streamline survey data analysis}
+\resumeItem{Developed a Streamlit web application with automated plotting for query results (\href{https://chatcapitalhumain.ca}{chatcapitalhumain.ca})} % ;validated with research personnel and adopted to streamline survey data analysis
 \resumeItemListEnd
 
 
 \resumeExperienceSubheading
-{Centre d'études acadiennes Anselme-Chiasson (CEAAC)}{June 2024 – Dec 2024}
+{LARIHS, University of Moncton}{June 2024 – Dec 2024}
 {Research Assistant}{New Brunswick, Canada}
 \resumeItemListStart
 \resumeItem{Developed a RAG-based conversational agent for querying historical Acadian genealogical records (1700-1900), reducing average archivist search time from \textasciitilde{}15 minutes per query to under 30 seconds (\href{https://chatacadien.ca}{chatacadien.ca})}
 \resumeItem{Engineered entity-centric chunking and context grounding solutions to disambiguate individuals with identical names in unstructured genealogical text, mitigating a primary cause of model hallucinations}
 \resumeItem{Evaluated and validated the system for faithfulness and context precision/recall on a dataset of real user interactions}
-\resumeItem{Built a complementary web application for archival image search with VLM-generated descriptions(\href{https://chatpatrimoineacadien.ca}{chatpatrimoineacadien.ca})}
+\resumeItem{Built complementary web application for archival image search with VLM-generated descriptions (\href{https://chatpatrimoineacadien.ca}{chatpatrimoineacadien.ca})}
 \resumeItemListEnd
 
 \resumeExperienceSubheading
-{CFRIA, University of Moncton}{Apr 2023 – June 2024}
+{LARIHS, University of Moncton}{Apr 2023 – June 2024}
 {Research Assistant}{New Brunswick, Canada}
 \resumeItemListStart
 \resumeItem{Benchmarked modern object detection models on industrial surface-defect datasets evaluating the performance-speed tradeoff}
