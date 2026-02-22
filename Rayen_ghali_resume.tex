@@ -76,11 +76,10 @@
 {Master's Thesis}{}
 {End-to-End Multimodal AI Agent for Autonomous Robotic Control}{}
 \resumeItemListStart
-\resumeItem{Designed an LLM-based agent integrated with a Vision-Language-Action policy for end-to-end control of a SO-101 robotic arm, enabling auto-planning, recovery, and real-time error handling from visual observations to physical action execution} 
-\resumeItem{Developed a multimodal voice interface for natural human-robot interaction and hands-free task execution}
-\resumeItem{Applied parameter-efficient fine-tuning and imitation learning to adapt vision-language models for robotic action generation}
-\resumeItem{Quantified system performance on real-world tasks, analyzing success rates and latency across VLA architectures}
-\resumeItem{Orchestrated multi‑GPU training workflows on Compute Canada’s CCDB cluster via Slurm}
+\resumeItem{Designed an LLM-based agent integrated with a Vision-Language-Action (VLA) policy for end-to-end robotic control, enabling autonomous task planning, error recovery, and real-time action execution from visual observations}
+\resumeItem{Applied parameter-efficient fine-tuning and reinforcement learning to adapt vision-language models for robotic action generation}
+\resumeItem{Established evaluation benchmarks measuring success rates, latency, and reliability across VLA architectures on real-world manipulation tasks and simulation environments}
+\resumeItem{Orchestrated distributed multi-GPU training on Compute Canada's CCDB cluster via Slurm, using W\&B for experiment tracking and reproducibility}
 
 \resumeItemListEnd
 
@@ -88,8 +87,7 @@
 \textbf{ChunkCanvas}
 \vspace{-8pt}
 \resumeItemListStart
-\resumeItem{Built a Next.js + FastAPI document processing platform for multimodal parsing, chunking, embedding, and vector database ingestion supporting PDF, images, audio, and video}
-\resumeItem{Integrated local LLM inference via vLLM and Ollama alongside cloud providers, enabling flexible model serving}
+\resumeItem{Built a full-stack document-processing application for RAG workflows, supporting multimodal parsing of PDFs, images, and audio/video using vLLM for local model serving alongside cloud inference engines, LangChain-based chunking, embedding generation, and vector database ingestion}
 \resumeItemListEnd
 
 \resumeSubHeadingListEnd
@@ -107,9 +105,9 @@
 \vspace{-8pt}
 \resumeItemListStart
 \resumeItem{Engineered a multimodal agent using LangGraph to control an industrial KUKA robot via natural language (text and speech)}
-\resumeItem{Integrated persistent conversational memory and a toolset for pick-and-place, Cartesian, and joint space movements, achieving < 2.6s end-to-end latency}
+\resumeItem{Integrated persistent conversational memory and a toolset for pick-and-place, Cartesian, and joint space movements, achieving $<$2.6s end-to-end latency}
 \resumeItem{Implemented a robust error recovery system featuring safety checks, rollback, automatic retries, and real-time voice feedback}
-\resumeItem{Co-authored: "LLM-driven agent for speech-enabled control of industrial robots: A case study in snow-crab quality inspection" published in Results in Engineering 2025}
+\resumeItem{Co-authored ``LLM-driven agent for speech-enabled control of industrial robots: A case study in snow-crab quality inspection,'' published in \textit{Results in Engineering}, 2025}
 \resumeItemListEnd
 
 \textbf{\small Survey Data Analytics Platform}
@@ -125,16 +123,16 @@
 \resumeItemListStart
 \resumeItem{Developed a RAG-based conversational agent for querying historical Acadian genealogical records (1700-1900), reducing average archivist search time from \textasciitilde{}15 minutes per query to under 30 seconds (\href{https://chatacadien.ca}{chatacadien.ca})}
 \resumeItem{Engineered entity-centric chunking and context grounding solutions to disambiguate individuals with identical names in unstructured genealogical text, mitigating a primary cause of model hallucinations}
-\resumeItem{Evaluated and validated the system for faithfulness and context precision/recall on a dataset of real user interactions}
+\resumeItem{Evaluated and validated the system for faithfulness, context precision, and recall on a curated dataset of real user interactions}
 \resumeItem{Built complementary web application for archival image search with VLM-generated descriptions (\href{https://chatpatrimoineacadien.ca}{chatpatrimoineacadien.ca})}
 \resumeItemListEnd
 
 \textbf{\small Industrial Defect Detection \& Few-Shot Learning}
 \vspace{-8pt}
 \resumeItemListStart
-\resumeItem{Benchmarked modern object detection models on industrial surface-defect datasets evaluating the performance-speed tradeoff}
+\resumeItem{Benchmarked modern object detection models on industrial surface-defect datasets, evaluating accuracy and speed tradeoffs}
 \resumeItem{Developed SSL-YOLO, a few-shot learning framework combining contrastive self-supervised pre-training with YOLOv8}
-\resumeItem{Co-authored and presented conference papers "Real-time defect detection systems for steel and wood inspection", IEEE CECCE 2024 and "Benchmarking few-shot learning techniques for steel surface defect detection", IEEE SWC 2025}
+\resumeItem{Co-authored and presented ``Real-time defect detection systems for steel and wood inspection'' (IEEE CECCE 2024) and ``Benchmarking few-shot learning techniques for steel surface defect detection'' (IEEE SWC 2025)}
 \resumeItemListEnd
 
 \resumeSubHeadingListEnd
