@@ -5,4 +5,5 @@
 *.fls
 *.fdb_latexmk
 *.synctex.gz
-job_descrption.txt
+*_CV.*
+*.txt
