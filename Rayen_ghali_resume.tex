@@ -11,15 +11,15 @@
 \addtolength{\topmargin}{-.7in}
 \addtolength{\textheight}{1.4in}
 \raggedright
+\linespread{0.93}
 
-\titleformat{\section}{
-  \vspace{-12pt}\scshape\raggedright\large\bfseries
-}{}{0em}{}[\titlerule \vspace{-8pt}]
+\titleformat{\section}{\large\scshape\raggedright\bfseries}{}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{4pt}{3pt}
 
-\newcommand{\resumeItem}[1]{
-  \item\small{
-    {#1 \vspace{-2pt}}
-  }
+\newcommand{\resumeItem}[1]{\item\small{#1 \vspace{-1pt}}}
+
+\newcommand{\resumeProjectHeading}[1]{
+  \par\addvspace{3pt}\noindent\textbf{\small #1}\par\nopagebreak\vspace{-3pt}
 }
 
 \newcommand{\resumeSubheading}[4]{
@@ -27,22 +27,22 @@
     \begin{tabular*}{1.0\textwidth}[t]{@{}p{0.78\textwidth}@{\extracolsep{\fill}}r@{}}
       \textbf{\raggedright #1} & \textbf{\small #2} \\
       \textit{\small\raggedright #3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-7pt}
+    \end{tabular*}\vspace{-4pt}
 }
 
 \newcommand{\resumeExperienceSubheading}[4]{
-  \vspace{-4pt}\item
+  \vspace{2pt}\item
     \begin{tabular*}{1.0\textwidth}[t]{@{}p{0.72\textwidth}@{\extracolsep{\fill}}r@{}}
       \textbf{\raggedright #3} & \textbf{\small #2} \\
       \textit{\small\raggedright #1} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-7pt}
+    \end{tabular*}\vspace{-4pt}
 }
 
 \renewcommand\labelitemi{\textbullet}
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]} 
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}, itemsep=0pt, topsep=0pt, parsep=0pt, partopsep=0pt]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}[label=\textbullet, itemsep=0.0em, topsep=0.3em, parsep=1.3pt]}% itemsep is the space between items % topsep is the space between title and first item % parsep is the space between items (all points)
+\newcommand{\resumeItemListStart}{\begin{itemize}[label=\textbullet, itemsep=0pt, topsep=1pt, parsep=0pt, partopsep=0pt]}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{0pt}}
 
 \begin{document}
@@ -70,7 +70,6 @@
 \vspace{1pt}
 
 \section{Projects}
-\vspace{5pt}
 \resumeSubHeadingListStart
 \resumeExperienceSubheading
 {Master's Thesis}{}
@@ -84,8 +83,7 @@
 \resumeItemListEnd
 
 
-\textbf{ChunkCanvas}
-\vspace{-8pt}
+\resumeProjectHeading{ChunkCanvas}
 \resumeItemListStart
 \resumeItem{Built a full-stack document-processing application for RAG workflows, supporting multimodal parsing of PDFs, images, and audio/video using vLLM for local model serving alongside cloud inference engines, LangChain-based chunking, embedding generation, and vector database ingestion}
 \resumeItemListEnd
@@ -101,8 +99,7 @@
 {Applied AI Research Assistant}{New Brunswick, Canada}
 
 \vspace{2pt}
-\textbf{\small LLM-Driven Industrial Robot Control}
-\vspace{-8pt}
+\resumeProjectHeading{LLM-Driven Industrial Robot Control}
 \resumeItemListStart
 \resumeItem{Engineered a multimodal agent using LangGraph to control an industrial KUKA robot via natural language (text and speech)}
 \resumeItem{Integrated persistent conversational memory and a toolset for pick-and-place, Cartesian, and joint space movements, achieving $<$2.6s end-to-end latency} %
@@ -110,16 +107,14 @@
 \resumeItem{Co-authored ``LLM-driven agent for speech-enabled control of industrial robots: A case study in snow-crab quality inspection,'' published in \textit{Results in Engineering}, 2025}
 \resumeItemListEnd
 
-\textbf{\small Survey Data Analytics Platform}
-\vspace{-8pt}
+\resumeProjectHeading{Survey Data Analytics Platform}
 \resumeItemListStart
 \resumeItem{Migrated 15 years of Acadian student survey data from 7 schools, converting Excel files to a centralized PostgreSQL database}
 \resumeItem{Built a multi-agent workflow using LangGraph with human-in-the-loop validation for natural language queries}
 \resumeItem{Developed a Streamlit web application with automated plotting for query results (\href{https://capital.chatacadien.ca}{capital.chatacadien.ca}); validated with research personnel and adopted to streamline survey data analysis}
 \resumeItemListEnd
 
-\textbf{\small Genealogical RAG Conversational Agent}
-\vspace{-8pt}
+\resumeProjectHeading{Genealogical RAG Conversational Agent}
 \resumeItemListStart
 \resumeItem{Developed a RAG-based conversational agent for querying historical Acadian genealogical records (1700-1900), reducing average archivist search time from \textasciitilde{}15 minutes per query to under 30 seconds (\href{https://chatacadien.ca}{chatacadien.ca})}
 \resumeItem{Engineered entity-centric chunking and context grounding solutions to disambiguate individuals with identical names in unstructured genealogical text, mitigating a primary cause of model hallucinations}
@@ -128,9 +123,7 @@
 \resumeItem{Co-authored and presented ``ChatAcadien: A RAG-LLM-Based Chatbot for Exploring Acadian Genealogy'' (IEEE CASCON 2025)}
 \resumeItemListEnd
 
-\vspace{-12pt}
-\textbf{\small Industrial Defect Detection \& Few-Shot Learning}
-\vspace{-8pt}
+\resumeProjectHeading{Industrial Defect Detection \& Few-Shot Learning}
 \resumeItemListStart
 \resumeItem{Benchmarked modern object detection models on industrial surface-defect datasets, evaluating accuracy and speed tradeoffs}
 \resumeItem{Developed SSL-YOLO, a few-shot learning framework combining contrastive self-supervised pre-training with YOLOv8}
@@ -140,8 +133,8 @@
 \resumeSubHeadingListEnd
 
 \section{Skills}
-\textbf{Languages}: Python, SQL \\
-\textbf{Technologies}: PyTorch, Transformers, LangChain, FastAPI, vLLM, W\&B, Supabase, Git, Docker, GCP
+\textbf{Languages}: Python, SQL, TypeScript \\
+\textbf{Technologies}: PyTorch, Transformers, LangChain, FastAPI, vLLM, W\&B, Supabase, Git, Docker, GCP, Azure, React
 
 \section{Languages}
 \textbf{Arabic:} Native \textbar\ \textbf{French:} Bilingual \textbar\ \textbf{English:} Proficient

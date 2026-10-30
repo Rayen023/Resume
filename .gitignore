@@ -8,3 +8,6 @@
 *_CV.*
 *.txt
 *.md
+
+# macOS metadata
+.DS_Store
