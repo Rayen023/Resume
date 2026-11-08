@@ -8,15 +8,15 @@
 
 \addtolength{\oddsidemargin}{-0.6in}
 \addtolength{\textwidth}{1.19in}
-\addtolength{\topmargin}{-.7in}
-\addtolength{\textheight}{1.4in}
+\addtolength{\topmargin}{-.84in}
+\addtolength{\textheight}{1.72in}
 \raggedright
-\linespread{0.93}
+\linespread{0.90}
 
 \titleformat{\section}{\large\scshape\raggedright\bfseries}{}{0em}{}[\titlerule]
-\titlespacing*{\section}{0pt}{4pt}{3pt}
+\titlespacing*{\section}{0pt}{3pt}{2pt}
 
-\newcommand{\resumeItem}[1]{\item\small{#1 \vspace{-1pt}}}
+\newcommand{\resumeItem}[1]{\item\small{#1 \vspace{-1.5pt}}}
 
 \newcommand{\resumeProjectHeading}[1]{
   \par\addvspace{3pt}\noindent\textbf{\small #1}\par\nopagebreak\vspace{-3pt}
@@ -49,9 +49,12 @@
 
 \begin{center}
   {\Huge \scshape Rayen Ghali} \\
-  \vspace{3pt}
-  +1 506-925-0056 \textbar\ \href{mailto:rayenghali02@gmail.com}{rayenghali02@gmail.com} \textbar\ \href{https://linkedin.com/in/rayenghali}{linkedin.com/in/rayenghali} \textbar\ \href{https://github.com/Rayen023}{github.com/Rayen023} \textbar\ \href{https://rayenghali.com}{rayenghali.com}
+  \vspace{2pt}
+  {\normalsize Applied AI Developer \textbar\ Generative AI, Embodied AI \& Computer Vision} \\
+  \vspace{2pt}
+  {\small +1 506-925-0056 \textbar\ \href{mailto:rayenghali02@gmail.com}{rayenghali02@gmail.com} \textbar\ \href{https://linkedin.com/in/rayenghali}{linkedin.com/in/rayenghali} \textbar\ \href{https://github.com/Rayen023}{github.com/Rayen023} \textbar\ \href{https://rayenghali.com}{rayenghali.com}}
 \end{center}
+\vspace{-6pt}
 
 \section{Education}
 \resumeSubHeadingListStart
@@ -69,33 +72,20 @@
 \resumeSubHeadingListEnd
 \vspace{1pt}
 
-\section{Projects}
-\resumeSubHeadingListStart
-\resumeExperienceSubheading
-{Master's Thesis}{}
-{End-to-End Multimodal AI Agent for Autonomous Robotic Control}{}
-\resumeItemListStart
-\resumeItem{Designed an LLM-based agent integrated with a Vision-Language-Action (VLA) policy for end-to-end robotic control, enabling autonomous task planning, error recovery, and real-time action execution from visual observations}
-\resumeItem{Applied parameter-efficient fine-tuning and reinforcement learning to adapt vision-language models for robotic action generation}
-\resumeItem{Established evaluation benchmarks measuring success rates and latency across VLA architectures on real-world manipulation tasks and simulation environments}
-\resumeItem{Orchestrated distributed multi-GPU training on Compute Canada's CCDB cluster via Slurm, using W\&B for experiment tracking and reproducibility}
-
-\resumeItemListEnd
-
-
-\resumeProjectHeading{ChunkCanvas}
-\resumeItemListStart
-\resumeItem{Built a full-stack document-processing application for RAG workflows, supporting multimodal parsing of PDFs, images, and audio/video using vLLM for local model serving alongside cloud inference engines, LangChain-based chunking, embedding generation, and vector database ingestion}
-\resumeItemListEnd
-
-\resumeSubHeadingListEnd
-
-
 \section{Experience}
-\vspace{5pt}
 \resumeSubHeadingListStart
 \resumeExperienceSubheading
-{LARIHS, University of Moncton}{Apr 2023 – Aug 2026}
+{MedCockpit}{Aug 2026 -- Present}
+{Software Developer}{Quebec, Canada}
+\resumeItemListStart
+\resumeItem{Develop a LangGraph conversational AI agent that answers MedCockpit software questions for pathologists and platform users, retrieving tutorial instructions, citing source videos, and supporting voice dictation}
+\resumeItem{Build a multimodal pipeline that converts tutorial narration and on-screen actions into structured, timestamped guides for the agent's searchable knowledge base}
+\resumeItem{Develop evaluation tooling to assess answer grounding, retrieval relevance, citation integrity, and handling of unsupported requests}
+\resumeItem{Deploy AI services on Azure using Python, FastAPI, React, TypeScript, and Docker, configuring Microsoft Entra authentication and role-based access in coordination with the development team}
+\resumeItemListEnd
+
+\resumeExperienceSubheading
+{LARIHS, University of Moncton}{Apr 2023 -- Aug 2026}
 {Applied AI Research Assistant}{New Brunswick, Canada}
 
 \vspace{2pt}
@@ -111,7 +101,7 @@
 \resumeItemListStart
 \resumeItem{Migrated 15 years of Acadian student survey data from 7 schools, converting Excel files to a centralized PostgreSQL database}
 \resumeItem{Built a multi-agent workflow using LangGraph with human-in-the-loop validation for natural language queries}
-\resumeItem{Developed a Streamlit web application with automated plotting for query results (\href{https://capital.chatacadien.ca}{capital.chatacadien.ca}); validated with research personnel and adopted to streamline survey data analysis}
+\resumeItem{Developed a Streamlit web application with automated plotting for query results (\href{https://capital.chatacadien.ca}{capital.chatacadien.ca}), validated with research personnel and adopted to streamline survey data analysis}
 \resumeItemListEnd
 
 \resumeProjectHeading{Genealogical RAG Conversational Agent}
@@ -132,11 +122,34 @@
 
 \resumeSubHeadingListEnd
 
+\section{Projects}
+\resumeSubHeadingListStart
+\resumeExperienceSubheading
+{Master's Thesis}{}
+{End-to-End Multimodal AI Agent for Autonomous Robotic Control}{}
+\resumeItemListStart
+\resumeItem{Designed an LLM-based agent integrated with a Vision-Language-Action (VLA) policy for end-to-end robotic control, enabling autonomous task planning, error recovery, and real-time action execution from visual observations}
+\resumeItem{Applied parameter-efficient fine-tuning and reinforcement learning to adapt vision-language models for robotic action generation}
+\resumeItem{Established evaluation benchmarks measuring success rates and latency across VLA architectures on real-world manipulation tasks and simulation environments}
+\resumeItem{Orchestrated distributed multi-GPU training on Compute Canada's CCDB cluster via Slurm, using W\&B for experiment tracking and reproducibility}
+
+\resumeItemListEnd
+
+
+\resumeProjectHeading{ChunkCanvas \textnormal{\small \textbar\ \href{https://chunkcanvas.cc}{chunkcanvas.cc} \textbar\ \href{https://github.com/Rayen023/ChunkCanvas}{github.com/Rayen023/ChunkCanvas}}}
+\resumeItemListStart
+\resumeItem{Built a full-stack document-processing application for RAG workflows, supporting multimodal parsing of PDFs, images, and audio/video using vLLM for local model serving alongside cloud inference engines, LangChain-based chunking, embedding generation, and vector database ingestion}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
 \section{Skills}
+{\small
 \textbf{Languages}: Python, SQL, TypeScript \\
-\textbf{Technologies}: PyTorch, Transformers, LangChain, FastAPI, vLLM, W\&B, Supabase, Git, Docker, GCP, Azure, React
+\textbf{Technologies}: PyTorch, Transformers, LangChain, LangGraph, FastAPI, vLLM, W\&B, Supabase, Git, Docker, GCP, Azure, React
+}
 
 \section{Languages}
-\textbf{Arabic:} Native \textbar\ \textbf{French:} Bilingual \textbar\ \textbf{English:} Proficient
+{\small \textbf{Arabic:} Native \textbar\ \textbf{French:} Bilingual \textbar\ \textbf{English:} Proficient}
 
 \end{document}
