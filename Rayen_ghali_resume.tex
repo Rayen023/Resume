@@ -1,155 +1,127 @@
-\documentclass[letterpaper,11pt]{article}
-\usepackage[empty]{fullpage}
+\documentclass[letterpaper,10pt]{article}
+\usepackage[margin=0.5in]{geometry}
 \usepackage{titlesec}
 \usepackage{enumitem}
+\usepackage{tabularx}
 \usepackage[hidelinks]{hyperref}
 \usepackage[bitstream-charter]{mathdesign}
 \usepackage[T1]{fontenc}
 
-\addtolength{\oddsidemargin}{-0.6in}
-\addtolength{\textwidth}{1.19in}
-\addtolength{\topmargin}{-.84in}
-\addtolength{\textheight}{1.72in}
+\pagestyle{empty}
 \raggedright
-\linespread{0.90}
 
 \titleformat{\section}{\large\scshape\raggedright\bfseries}{}{0em}{}[\titlerule]
-\titlespacing*{\section}{0pt}{3pt}{2pt}
+\titlespacing*{\section}{0pt}{9pt}{4pt}
 
-\newcommand{\resumeItem}[1]{\item\small{#1 \vspace{-1.5pt}}}
+\newcommand{\resumeItem}[1]{\item #1}
 
 \newcommand{\resumeProjectHeading}[1]{
-  \par\addvspace{3pt}\noindent\textbf{\small #1}\par\nopagebreak\vspace{-3pt}
+  \par\addvspace{5pt}\noindent\textbf{#1}\par\nopagebreak
+}
+
+\newcommand{\resumeResearchProjectHeading}[1]{
+  \par\addvspace{4pt}\noindent\textbf{\textit{#1}}\par\nopagebreak
 }
 
 \newcommand{\resumeSubheading}[4]{
-  \vspace{-2pt}\item
-    \begin{tabular*}{1.0\textwidth}[t]{@{}p{0.78\textwidth}@{\extracolsep{\fill}}r@{}}
-      \textbf{\raggedright #1} & \textbf{\small #2} \\
-      \textit{\small\raggedright #3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-4pt}
+  \par\addvspace{5pt}\noindent
+  \begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}X r@{}}
+    \textbf{#1} & \textbf{#2} \\
+    \textit{#3} & \textit{#4}
+  \end{tabularx}\par\nopagebreak
 }
 
-\newcommand{\resumeExperienceSubheading}[4]{
-  \vspace{2pt}\item
-    \begin{tabular*}{1.0\textwidth}[t]{@{}p{0.72\textwidth}@{\extracolsep{\fill}}r@{}}
-      \textbf{\raggedright #3} & \textbf{\small #2} \\
-      \textit{\small\raggedright #1} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-4pt}
-}
-
-\renewcommand\labelitemi{\textbullet}
-
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}, itemsep=0pt, topsep=0pt, parsep=0pt, partopsep=0pt]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}[label=\textbullet, itemsep=0pt, topsep=1pt, parsep=0pt, partopsep=0pt]}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{0pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[label=\textbullet, leftmargin=1.4em, itemsep=1pt, topsep=2pt, parsep=0pt, partopsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}}
 
 \begin{document}
 
-\begin{center}
-  {\Huge \scshape Rayen Ghali} \\
-  \vspace{2pt}
-  {\normalsize Applied AI Developer \textbar\ Generative AI, Embodied AI \& Computer Vision} \\
-  \vspace{2pt}
-  {\small +1 506-925-0056 \textbar\ \href{mailto:rayenghali02@gmail.com}{rayenghali02@gmail.com} \textbar\ \href{https://linkedin.com/in/rayenghali}{linkedin.com/in/rayenghali} \textbar\ \href{https://github.com/Rayen023}{github.com/Rayen023} \textbar\ \href{https://rayenghali.com}{rayenghali.com}}
-\end{center}
-\vspace{-6pt}
+{\centering
+  {\Huge \scshape Rayen Ghali\par}
+  \vspace{3pt}
+  +1 506-925-0056 \textbar\ \href{mailto:rayenghali02@gmail.com}{rayenghali02@gmail.com} \textbar\ \href{https://linkedin.com/in/rayenghali}{linkedin.com/in/rayenghali} \textbar\ \href{https://github.com/Rayen023}{github.com/Rayen023} \textbar\ \href{https://rayenghali.com}{rayenghali.com}\par
+}
+
+\section{Experience}
+\resumeSubheading
+{Software Developer}{Aug 2026 -- Present}
+{MedCockpit}{Quebec, Canada}
+\resumeItemListStart
+\resumeItem{Develop a LangGraph assistant that answers MedCockpit software questions for pathologists and platform users, retrieves tutorial instructions, cites source videos, and supports voice dictation}
+\resumeItem{Build a multimodal pipeline that turns tutorial narration and on-screen actions into structured, timestamped guides for the agent's searchable knowledge base}
+\resumeItem{Develop evaluation tooling to measure answer grounding, retrieval relevance, citation accuracy, and how the agent handles unsupported requests}
+\resumeItem{Deploy a Dockerized FastAPI backend to Azure Container Apps alongside React/TypeScript web apps. Configure Microsoft Entra ID role-based access, managed identity for Azure AI Foundry and Blob Storage, health probes, and LangSmith tracing}
+\resumeItemListEnd
+
+\resumeSubheading
+{Applied AI Research Assistant}{Apr 2023 -- Aug 2026}
+{LARIHS, University of Moncton}{New Brunswick, Canada}
+
+\resumeResearchProjectHeading{LLM-Driven Industrial Robot Control}
+\resumeItemListStart
+\resumeItem{Built a LangGraph agent that controls an industrial KUKA robot via text and speech in under 2.6 seconds end to end}
+\resumeItem{Added persistent conversation memory and tools for pick-and-place, Cartesian motion, and joint-space motion}
+\resumeItem{Implemented safety checks, rollback, and automatic retries for error recovery, with real-time voice feedback}
+\resumeItem{Co-authored \textit{LLM-driven agent for speech-enabled control of industrial robots: A case study in snow-crab quality inspection \textup{published in \textit{Results in Engineering}, 2025}}}
+\resumeItemListEnd
+
+% Include for data analytics, text-to-SQL, or dashboard roles.
+% \resumeResearchProjectHeading{Survey Data Analytics Platform}
+% \resumeItemListStart
+% \resumeItem{Migrated 15 years of Acadian student survey data from 7 schools, converting Excel files to a centralized PostgreSQL database}
+% \resumeItem{Built a multi-agent workflow using LangGraph with human-in-the-loop validation for natural language queries}
+% \resumeItem{Developed a Streamlit web application with automated plotting for query results (\href{https://capital.chatacadien.ca}{capital.chatacadien.ca}), validated with research personnel and adopted to streamline survey data analysis}
+% \resumeItemListEnd
+
+\resumeResearchProjectHeading{Genealogical RAG Conversational Agent}
+\resumeItemListStart
+\resumeItem{Built \href{https://chatacadien.ca}{ChatAcadien}, a RAG assistant for Acadian genealogical records (1700--1900) that cut average archivist search time from about 15 minutes to under 30 seconds per query}
+\resumeItem{Used entity-based chunking and context grounding to help the model distinguish people with the same name}
+\resumeItem{Measured faithfulness, context precision, and recall on a curated dataset of real user interactions}
+% Include for multimodal search or archival applications.
+% \resumeItem{Built complementary web application for archival image search with VLM-generated descriptions (\href{https://images.chatacadien.ca}{images.chatacadien.ca})}
+\resumeItem{Co-authored and presented \textit{ChatAcadien: A RAG-LLM-Based Chatbot for Exploring Acadian Genealogy} \mbox{(IEEE CASCON 2025)}}
+\resumeItemListEnd
+
+% Include for computer vision, manufacturing inspection, or few-shot learning roles.
+% \resumeResearchProjectHeading{Industrial Defect Detection \& Few-Shot Learning}
+% \resumeItemListStart
+% \resumeItem{Benchmarked modern object detection models on industrial surface-defect datasets, evaluating accuracy and speed tradeoffs}
+% \resumeItem{Developed SSL-YOLO, a few-shot learning framework combining contrastive self-supervised pre-training with YOLOv8}
+% \resumeItem{Co-authored and presented \textit{Real-time defect detection systems for steel and wood inspection} \mbox{(IEEE CECCE 2024)} and \textit{Benchmarking few-shot learning techniques for steel surface defect detection} \mbox{(IEEE SWC 2025)}}
+% \resumeItemListEnd
+\section{Projects}
+\resumeProjectHeading{Master's Thesis \textnormal{\textbar\ End-to-End Multimodal AI Agent for Autonomous Robotic Control}}
+\resumeItemListStart
+\resumeItem{Combined LLM task planning with a Vision-Language-Action policy for real-time robot control from visual observations, including error recovery}
+\resumeItem{Adapted vision-language models for robotic action generation with parameter-efficient fine-tuning and reinforcement learning}
+\resumeItem{Benchmarked task success and latency across model architectures in simulation and on real-world manipulation tasks}
+\resumeItem{Ran distributed multi-GPU training on Compute Canada's cluster via Slurm and tracked experiments with W\&B}
+\resumeItemListEnd
+
+\resumeProjectHeading{ChunkCanvas \textnormal{\textbar\ \href{https://chunkcanvas.cc}{chunkcanvas.cc} \textbar\ \href{https://github.com/Rayen023/ChunkCanvas}{github.com/Rayen023/ChunkCanvas}}}
+\resumeItemListStart
+\resumeItem{Built a full-stack application that parses PDFs, images, audio, and video with local vLLM or cloud inference, uses LangChain to chunk content, and generates and indexes embeddings in vector databases}
+\resumeItemListEnd
 
 \section{Education}
-\resumeSubHeadingListStart
 \resumeSubheading
 {University of Moncton, Faculty of Engineering}
 {May 2026}
 {Master of Applied Science (MASc) \textbar\ GPA: 4.18/4.3}
 {New Brunswick, Canada}
-\vspace{-1pt}
 \resumeSubheading
 {University of Carthage, National Institute of Applied Science and Technology (INSAT)}
 {Sept 2023}
 {Industrial and Systems Engineering \textbar\ Graduated with High Honours}
 {Tunis, Tunisia}
-\resumeSubHeadingListEnd
-\vspace{1pt}
-
-\section{Experience}
-\resumeSubHeadingListStart
-\resumeExperienceSubheading
-{MedCockpit}{Aug 2026 -- Present}
-{Software Developer}{Quebec, Canada}
-\resumeItemListStart
-\resumeItem{Develop a LangGraph conversational AI agent that answers MedCockpit software questions for pathologists and platform users, retrieving tutorial instructions, citing source videos, and supporting voice dictation}
-\resumeItem{Build a multimodal pipeline that converts tutorial narration and on-screen actions into structured, timestamped guides for the agent's searchable knowledge base}
-\resumeItem{Develop evaluation tooling to assess answer grounding, retrieval relevance, citation integrity, and handling of unsupported requests}
-\resumeItem{Deploy a Dockerized FastAPI backend on Azure Container Apps and React/TypeScript web apps, configuring Microsoft Entra ID RBAC, Managed Identity access to Azure AI Foundry and Blob Storage, health probes, and LangSmith tracing}
-\resumeItemListEnd
-
-\resumeExperienceSubheading
-{LARIHS, University of Moncton}{Apr 2023 -- Aug 2026}
-{Applied AI Research Assistant}{New Brunswick, Canada}
-
-\vspace{2pt}
-\resumeProjectHeading{LLM-Driven Industrial Robot Control}
-\resumeItemListStart
-\resumeItem{Engineered a multimodal agent using LangGraph to control an industrial KUKA robot via natural language (text and speech)}
-\resumeItem{Integrated persistent conversational memory and a toolset for pick-and-place, Cartesian, and joint space movements, achieving $<$2.6s end-to-end latency} %
-\resumeItem{Implemented a robust error recovery system featuring safety checks, rollback, automatic retries, and real-time voice feedback}
-\resumeItem{Co-authored ``LLM-driven agent for speech-enabled control of industrial robots: A case study in snow-crab quality inspection,'' published in \textit{Results in Engineering}, 2025}
-\resumeItemListEnd
-
-\resumeProjectHeading{Survey Data Analytics Platform}
-\resumeItemListStart
-\resumeItem{Migrated 15 years of Acadian student survey data from 7 schools, converting Excel files to a centralized PostgreSQL database}
-\resumeItem{Built a multi-agent workflow using LangGraph with human-in-the-loop validation for natural language queries}
-\resumeItem{Developed a Streamlit web application with automated plotting for query results (\href{https://capital.chatacadien.ca}{capital.chatacadien.ca}), validated with research personnel and adopted to streamline survey data analysis}
-\resumeItemListEnd
-
-\resumeProjectHeading{Genealogical RAG Conversational Agent}
-\resumeItemListStart
-\resumeItem{Developed a RAG-based conversational agent for querying historical Acadian genealogical records (1700-1900), reducing average archivist search time from \textasciitilde{}15 minutes per query to under 30 seconds (\href{https://chatacadien.ca}{chatacadien.ca})}
-\resumeItem{Engineered entity-centric chunking and context grounding solutions to disambiguate individuals with identical names in unstructured genealogical text, mitigating a primary cause of model hallucinations}
-\resumeItem{Evaluated and validated the system for faithfulness, context precision, and recall on a curated dataset of real user interactions}
-\resumeItem{Built complementary web application for archival image search with VLM-generated descriptions (\href{https://images.chatacadien.ca}{images.chatacadien.ca})}
-\resumeItem{Co-authored and presented ``ChatAcadien: A RAG-LLM-Based Chatbot for Exploring Acadian Genealogy'' (IEEE CASCON 2025)}
-\resumeItemListEnd
-
-\resumeProjectHeading{Industrial Defect Detection \& Few-Shot Learning}
-\resumeItemListStart
-\resumeItem{Benchmarked modern object detection models on industrial surface-defect datasets, evaluating accuracy and speed tradeoffs}
-\resumeItem{Developed SSL-YOLO, a few-shot learning framework combining contrastive self-supervised pre-training with YOLOv8}
-\resumeItem{Co-authored and presented ``Real-time defect detection systems for steel and wood inspection'' (IEEE CECCE 2024) and ``Benchmarking few-shot learning techniques for steel surface defect detection'' (IEEE SWC 2025)}
-\resumeItemListEnd
-
-\resumeSubHeadingListEnd
-
-\section{Projects}
-\resumeSubHeadingListStart
-\resumeExperienceSubheading
-{Master's Thesis}{}
-{End-to-End Multimodal AI Agent for Autonomous Robotic Control}{}
-\resumeItemListStart
-\resumeItem{Designed an LLM-based agent integrated with a Vision-Language-Action (VLA) policy for end-to-end robotic control, enabling autonomous task planning, error recovery, and real-time action execution from visual observations}
-\resumeItem{Applied parameter-efficient fine-tuning and reinforcement learning to adapt vision-language models for robotic action generation}
-\resumeItem{Established evaluation benchmarks measuring success rates and latency across VLA architectures on real-world manipulation tasks and simulation environments}
-\resumeItem{Orchestrated distributed multi-GPU training on Compute Canada's CCDB cluster via Slurm, using W\&B for experiment tracking and reproducibility}
-
-\resumeItemListEnd
-
-
-\resumeProjectHeading{ChunkCanvas \textnormal{\small \textbar\ \href{https://chunkcanvas.cc}{chunkcanvas.cc} \textbar\ \href{https://github.com/Rayen023/ChunkCanvas}{github.com/Rayen023/ChunkCanvas}}}
-\resumeItemListStart
-\resumeItem{Built a full-stack document-processing application for RAG workflows, supporting multimodal parsing of PDFs, images, and audio/video using vLLM for local model serving alongside cloud inference engines, LangChain-based chunking, embedding generation, and vector database ingestion}
-\resumeItemListEnd
-
-\resumeSubHeadingListEnd
 
 \section{Skills}
-{\small
-\textbf{Languages}: Python, SQL, TypeScript \\
-\textbf{Technologies}: PyTorch, Transformers, LangChain, LangGraph, FastAPI, vLLM, W\&B, Supabase, Git, Docker, GCP, Azure, React
-}
+\textbf{Programming}: Python, SQL, TypeScript \\
+\textbf{Technologies}: PyTorch, Transformers, LangChain, LangGraph, FastAPI, vLLM, W\&B, Docker, Azure, React
+% Additional technologies for relevant postings: Supabase, Git, GCP.
 
 \section{Languages}
-{\small \textbf{Arabic:} Native \textbar\ \textbf{French:} Bilingual \textbar\ \textbf{English:} Proficient}
+\textbf{Arabic:} Native \textbar\ \textbf{French:} Bilingual \textbar\ \textbf{English:} Proficient
 
 \end{document}
